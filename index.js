@@ -577,13 +577,222 @@
 
 //Scoping;
 
-function myFunc() {
-  if (true) {
-    var x = 90;
-    let y = 80;
-    const z = 60;
-    console.log(y);
-  }
-  console.log(x);
+// function myFunc() {
+//   if (true) {
+//     var x = 90;
+//     let y = 80;
+//     const z = 60;
+//     console.log(y);
+//   }
+//   console.log(x);
+// }
+// myFunc();
+//DOM Manipulation
+
+// let result = document.getElementById("hello");
+// result.innerText = " I have many Proof";
+// result.style.backgroundColor = "red";
+// result.style.color = "white";
+// result.style.textAlign = "center";
+
+// result.setAttribute("class", "newClass");
+// console.log(result.getAttribute("class"));
+
+// let ans = document.getElementsByClassName("myDiv")[0];
+// ans.innerHTML = "Haina k ho yesto yo Chhaka parchu";
+// ans.style.backgroundColor = "blue";
+// ans.style.color = "white";
+// ans.style.textAlign = "center";
+// ans.style.padding = "10px";
+
+// let output = document.getElementsByClassName("myDiv");
+// output[1].innerHTML = "Kinaki Nepal ma opportunities nai kaam cha";
+// output[1].style.backgroundColor = "purple";
+// output[1].style.color = "white";
+// output[1].style.textAlign = "center";
+// output[1].style.padding = "10px";
+
+// let display = document.getElementsByTagName("span")[0];
+// display.innerText = "Nepalma yiniharkukai raj chha";
+// display.style.backgroundColor = "yellow";
+// display.style.color = "black";
+
+// let show = document.getElementsByTagName("span")[1];
+// show.innerText = "Bichar lekhchas computer ma gadi kholama ani";
+// show.style.backgroundColor = "gray";
+// show.style.color = "white";
+
+// function AddTask() {
+//   let h1 = document.createElement("h1");
+//   h1.innerHTML = "Task1";
+//   document.body.prepend(h1);
+// }
+
+// function RemoveTask() {
+//   let div = document.querySelector("h1");
+//   div.remove();
+// }
+
+// let btnAdd = document.querySelector("#btnAdd");
+// btnAdd.style.backgroundColor = "blue";
+// btnAdd.style.color = "#fff";
+// btnAdd.style.padding = "20px";
+// btnAdd.style.border = "none";
+// btnAdd.style.cursor = "pointer";
+
+// btnAdd.onclick = AddTask;
+
+// let btnRemove = document.querySelectorAll("button")[1];
+// btnRemove.style.backgroundColor = "red";
+// btnRemove.style.color = "#fff";
+// btnRemove.style.padding = "20px";
+// btnRemove.style.border = "none";
+// btnRemove.style.cursor = "pointer";
+
+// btnRemove.onclick = RemoveTask;
+
+//Advance Array Method
+
+let arr = [4, 5, 2, 3, 7, 8, 9];
+//find
+
+// let ans = arr.find((value) => value > 7);
+// console.log(ans);
+
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "Air Force 1", price: 5000, inStock: false },
+//   { id: 3, name: "SB Dunk", price: 4500, inStock: false },
+//   { id: 4, name: "Travis Cott", price: 6500, inStock: true },
+// ];
+
+// let output = products.find((value) => value.inStock);
+// console.log(output);
+
+//filter
+// let ans = arr.filter((value) => value > 7);
+// console.log(ans);
+
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "Air Force 1", price: 5000, inStock: false },
+//   { id: 3, name: "SB Dunk", price: 4500, inStock: false },
+//   { id: 4, name: "Travis Cott", price: 6500, inStock: true },
+// ];
+
+// let output = products.filter((value) => !value.inStock);
+// console.log(output);
+
+//some
+// let ans = arr.some((value) => value > 7);
+// console.log(ans);
+
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "Air Force 1", price: 5000, inStock: false },
+//   { id: 3, name: "SB Dunk", price: 4500, inStock: false },
+//   { id: 4, name: "Travis Cott", price: 6500, inStock: true },
+// ];
+
+// let output = products.some((value) => !value.inStock);
+// console.log(output);
+
+//every
+// let ans = arr.every((value) => value > 7);
+// console.log(ans);
+
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "Air Force 1", price: 5000, inStock: false },
+//   { id: 3, name: "SB Dunk", price: 4500, inStock: false },
+//   { id: 4, name: "Travis Cott", price: 6500, inStock: true },
+// ];
+
+// let output = products.every((value) => !value.inStock);
+// console.log(output);
+
+//forEach
+// let ans = arr.forEach((value) => value * 7);
+// console.log(ans);
+
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "Air Force 1", price: 5000, inStock: false },
+//   { id: 3, name: "SB Dunk", price: 4500, inStock: false },
+//   { id: 4, name: "Travis Cott", price: 6500, inStock: true },
+// ];
+
+// let output = products.forEach((value) => value.name);
+// console.log(output);
+
+// //map
+// let ans = arr.map((value) => value * 7);
+// console.log(ans);
+
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "Air Force 1", price: 5000, inStock: false },
+//   { id: 3, name: "SB Dunk", price: 4500, inStock: false },
+//   { id: 4, name: "Travis Cott", price: 6500, inStock: true },
+// ];
+
+// let output = products.map((value) => value.name);
+// console.log(output);
+// let h1 = document.createElement("h1");
+// h1.innerHTML = output;
+// document.body.append(h1);
+
+//reduce
+// let ans = arr.reduce((accum, curValue) => accum + curValue);
+// console.log(ans);
+
+// const products = [
+//   { id: 1, name: "Dr Martin", price: 8000, inStock: true },
+//   { id: 2, name: "Air Force 1", price: 5000, inStock: false },
+//   { id: 3, name: "SB Dunk", price: 4500, inStock: false },
+//   { id: 4, name: "Travis Cott", price: 6500, inStock: true },
+// ];
+
+// let output = products.reduce((total, curValue) => total + curValue.price, 0);
+// console.log(output);
+
+//addEventListneres
+// const heading = document.getElementById("heading");
+// const box1 = document.getElementById("box1");
+// const addBtn = document.getElementById("btnAdd");
+// let input = document.getElementById("newInput");
+
+// addBtn.addEventListener("click", () => {
+//   console.log("Clicked");
+//   heading.innerText = "Who are you";
+//   heading.style.backgroundColor = "red";
+//   heading.style.color = "white";
+//   heading.style.padding = "20px";
+// });
+
+// addBtn.addEventListener("dblclick", () => {
+//   addBtn.style.backgroundColor = "purple";
+//   addBtn.style.color = "white";
+//   addBtn.style.padding = "20px";
+//   addBtn.style.border = "none";
+// });
+
+// input.addEventListener("change", (e) => {
+//   console.log(e.target.value);
+// });
+
+const input = document.getElementById("myInput");
+const addBtn = document.getElementById("addBtn");
+const removeBtn = document.getElementById("removeBtn");
+
+const myFunc = () => {
+  localStorage.setItem("key1", JSON.stringify({ name: "Shyam Giri", age: 23 }));
+};
+addBtn.addEventListener("click", myFunc);
+
+removeBtn.addEventListener("click", () => {
+  localStorage.clear();
+});
+if (localStorage.getItem("key1")) {
+  console.log(JSON.parse(localStorage.getItem("key1")));
 }
-myFunc();
