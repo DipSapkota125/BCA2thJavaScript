@@ -781,18 +781,185 @@ let arr = [4, 5, 2, 3, 7, 8, 9];
 //   console.log(e.target.value);
 // });
 
-const input = document.getElementById("myInput");
-const addBtn = document.getElementById("addBtn");
-const removeBtn = document.getElementById("removeBtn");
+// const input = document.getElementById("myInput");
+// const addBtn = document.getElementById("addBtn");
+// const removeBtn = document.getElementById("removeBtn");
 
-const myFunc = () => {
-  localStorage.setItem("key1", JSON.stringify({ name: "Shyam Giri", age: 23 }));
-};
-addBtn.addEventListener("click", myFunc);
+// const myFunc = () => {
+//   localStorage.setItem("key1", JSON.stringify({ name: "Shyam Giri", age: 23 }));
+// };
+// addBtn.addEventListener("click", myFunc);
 
-removeBtn.addEventListener("click", () => {
-  localStorage.clear();
-});
-if (localStorage.getItem("key1")) {
-  console.log(JSON.parse(localStorage.getItem("key1")));
+// removeBtn.addEventListener("click", () => {
+//   localStorage.clear();
+// });
+// if (localStorage.getItem("key1")) {
+//   console.log(JSON.parse(localStorage.getItem("key1")));
+// }
+
+//Math Object
+
+// console.log(Math.random());
+//round up
+
+// console.log(Math.pow(2, 6));
+// console.log(Math.sqrt(25));
+
+//Date
+// let now = new Date();
+// console.log(now);
+
+// let year = new Date().getFullYear();
+// console.log(year);
+
+// let month = new Date().getMonth();
+// console.log(month);
+
+// let day = new Date().getDay();
+// console.log(day);
+
+// let date = new Date().getDate();
+// console.log(date);
+
+//Math(Object)
+
+// console.log(Math.random());
+//pow
+// console.log(Math.pow(2, 6));
+//square
+// console.log(Math.sqrt(25));
+
+//round
+// let num = 4.7;
+// let result = Math.round(num);
+// console.log(result);
+
+//floor
+// let num = 4.2;
+// let result = Math.floor(num);
+// console.log(result);
+
+//ceil
+// let num = 4.2;
+// let result = Math.ceil(num);
+// console.log(result);
+
+//trunc
+// let num = 4.9;
+// let result = Math.trunc(num);
+// console.log(result);
+
+//abs
+// function AbsValue(a, b) {
+//   return Math.abs(a - b);
+// }
+
+// let result = AbsValue(3, 7);
+// console.log(result);
+
+// console.log(Math.PI);
+
+//Area OF Circle
+// function AreaOfCircle(radius) {
+//   return Math.PI * radius * radius;
+// }
+
+// let result = AreaOfCircle(5);
+// console.log(result);
+
+//OTP
+// function generateOTP() {
+//   return Math.floor(100000 + Math.random() * 900000);
+// }
+
+// let output = generateOTP();
+// console.log(output);
+
+//Date
+// const now = new Date();
+// console.log(now);
+
+// let year = now.getFullYear();+
+// console.log(year);
+
+// let month = now.getMonth();
+// console.log(month);
+
+// let day = now.getDay();
+// console.log(day);
+
+//SetTitmeout
+
+// setTimeout(() => {
+//   console.log("Suarya Airlines kina kasari Crash Bhayoo");
+// }, 2000);
+
+// let intervalId = setInterval(() => {
+//   console.log("Suarya Airlines kina kasari Crash Bhayoo");
+// }, 1000);
+
+// setTimeout(() => {
+//   clearInterval(intervalId);
+// }, 5000);
+
+//CLOCK
+
+// function updateClock() {
+//   let clock = document.querySelector(".clock");
+//   let now = new Date();
+
+//   let hours = now.getHours().toString().padStart(2, "0");
+//   let minutes = now.getMinutes().toString().padStart(2, "0");
+//   let seconds = now.getSeconds().toString().padStart(2, "0");
+
+//   clock.innerHTML = `${hours}:${minutes}:${seconds}`;
+// }
+
+// setInterval(updateClock, 1000);
+
+// function BankAccount(customerName, balance) {
+//   this.customerName = customerName;
+//   this.balance = balance;
+//   this.accountNumber = Date.now();
+// }
+
+// const ramAccount = new BankAccount("Ram Thapa", 5000);
+// const sitaAccount = new BankAccount("Sita Devi", 9000);
+
+// console.log(ramAccount);
+// console.log(sitaAccount);
+
+//class(OOP)
+
+class BankAccount {
+  constructor(customerName, balance) {
+    this.customerName = customerName;
+    this.balance = balance;
+    this.accountNumber = Date.now();
+  }
+
+  deposit(amount) {
+    this.balance += amount;
+  }
+
+  withdraw(amount) {
+    this.balance -= amount;
+  }
 }
+
+class SavingAccount extends BankAccount {
+  constructor(customerName, balance) {
+    super(customerName, balance);
+    this.transactionLimit = 50000;
+  }
+
+  takePersonalLoan(amount, taxRate) {
+    let ans = amount + (amount * taxRate) / 100;
+    console.log(`You Personal loan with Interest is:${ans}`);
+  }
+}
+
+const balenAccount = new SavingAccount("Balendra Shah", 5000);
+const harkaAccount = new SavingAccount("Harka Rai", 9000);
+harkaAccount.takePersonalLoan(90000, 12);
+console.log(harkaAccount);
