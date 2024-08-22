@@ -653,7 +653,7 @@
 
 //Advance Array Method
 
-let arr = [4, 5, 2, 3, 7, 8, 9];
+// let arr = [4, 5, 2, 3, 7, 8, 9];
 //find
 
 // let ans = arr.find((value) => value > 7);
@@ -931,35 +931,204 @@ let arr = [4, 5, 2, 3, 7, 8, 9];
 
 //class(OOP)
 
-class BankAccount {
-  constructor(customerName, balance) {
-    this.customerName = customerName;
-    this.balance = balance;
-    this.accountNumber = Date.now();
-  }
+// class BankAccount {
+//   constructor(customerName, balance) {
+//     this.customerName = customerName;
+//     this.balance = balance;
+//     this.accountNumber = Date.now();
+//   }
 
-  deposit(amount) {
-    this.balance += amount;
-  }
+//   deposit(amount) {
+//     this.balance += amount;
+//   }
 
-  withdraw(amount) {
-    this.balance -= amount;
-  }
-}
+//   withdraw(amount) {
+//     this.balance -= amount;
+//   }
+// }
 
-class SavingAccount extends BankAccount {
-  constructor(customerName, balance) {
-    super(customerName, balance);
-    this.transactionLimit = 50000;
-  }
+// class SavingAccount extends BankAccount {
+//   constructor(customerName, balance) {
+//     super(customerName, balance);
+//     this.transactionLimit = 50000;
+//   }
 
-  takePersonalLoan(amount, taxRate) {
-    let ans = amount + (amount * taxRate) / 100;
-    console.log(`You Personal loan with Interest is:${ans}`);
-  }
-}
+//   takePersonalLoan(amount, taxRate) {
+//     let ans = amount + (amount * taxRate) / 100;
+//     console.log(`You Personal loan with Interest is:${ans}`);
+//   }
+// }
 
-const balenAccount = new SavingAccount("Balendra Shah", 5000);
-const harkaAccount = new SavingAccount("Harka Rai", 9000);
-harkaAccount.takePersonalLoan(90000, 12);
-console.log(harkaAccount);
+// const balenAccount = new SavingAccount("Balendra Shah", 5000);
+
+// const harkaAccount = new SavingAccount("Harka Rai", 9000);
+// harkaAccount.takePersonalLoan(90000, 12);
+// console.log(harkaAccount);
+
+// class BankAccount {
+//   customerName;
+//   #balance;
+//   accountNumber;
+//   constructor(customerName, balance) {
+//     this.customerName = customerName;
+//     this.#balance = balance;
+//     this.accountNumber = Date.now();
+//   }
+
+//   setBalance(amount) {
+//     this.#balance += amount;
+//   }
+
+//   getBalance(amount) {
+//     return this.#balance;
+//   }
+
+//   deposit(amount) {
+//     this.#balance += amount;
+//     this.#logTransactions("deposit", amount);
+//   }
+//   withdraw(amount) {
+//     this.#balance -= amount;
+//     this.#logTransactions("withdraw", amount);
+//   }
+
+//   #logTransactions(type, amount) {
+//     console.log(`Transaction Type: ${type} , Amount: ${amount}`);
+//   }
+// }
+
+// const ramAccount = new BankAccount("Ram Thapa", 3000);
+// const laxmanAccount = new BankAccount("Laxman Singh", 4000);
+// ramAccount.deposit(9000);
+// ramAccount.setBalance(7000);
+// console.log(ramAccount.getBalance());
+
+// console.log(ramAccount, laxmanAccount);
+
+//Static Property And Method
+// class User {
+//   static studentUsers = 0;
+//   constructor(name, age, isMarried) {
+//     this.name = name;
+//     this.age = age;
+//     this.isMarried = isMarried;
+//     User.studentUsers += 1;
+//   }
+
+//   static sortByAge(a, b) {
+//     return a.age - b.age;
+//   }
+// }
+
+// let user1 = new User("Hari Maharjan", 37, "Married");
+// let user2 = new User("Sanjib baraili", 22, "UnMarried");
+// let user3 = new User("Amrit Gurung", 30, "Married");
+// let user4 = new User("Prakash Khatiwoda", 15, "Married");
+
+// let users = [user1, user2, user3, user4];
+// let output = users.sort(User.sortByAge);
+// console.log(output);
+// console.log(User.studentUsers);
+
+// let x;
+// console.log(x);
+// console.log(typeof x);
+
+// let x = null;
+// console.log(x);
+// console.log(typeof x);
+
+// const result = "Hello World"
+// console.log(result)
+// console.log(typeof result)
+
+// const result = 90;
+// console.log(result);
+// console.log(typeof result);
+
+// const result = 4.67;
+// console.log(result);
+// console.log(typeof result);
+
+// const isMarried = false;
+// console.log(isMarried);
+// console.log(typeof isMarried);
+
+// const ans = 347655376334765837n;
+// console.log(ans);
+// console.log(typeof ans);
+
+// const output = Symbol("HEy I Am Dip");
+// console.log(output);
+// console.log(typeof output);
+
+//Object Types
+// const Obj = {
+//   name: "ram Thapa",
+//   age: 23,
+//   isMarried: true,
+// };
+// console.log(Obj);
+// console.log(typeof Obj);
+
+// const ans = new Date();
+// console.log(ans);
+// console.log(typeof ans);
+
+// const arr = [3, 4, 5, 6, 7, 8, 9];
+// console.log(arr);
+// console.log(typeof arr);
+
+// const x = "34";
+// const ans = Number(x);
+// console.log(ans);
+// console.log(typeof ans);
+
+// const ans = 34;
+// let output = ans.toString();
+// let output = String(ans);
+// console.log(output);
+// console.log(typeof output);
+
+// let x = "";
+// const result = Boolean(x);
+// console.log(result);
+// console.log(typeof result);
+
+// const ans = "4.67";
+// const result = Number(ans);
+// console.log(result);
+// console.log(typeof result);
+
+// const result = "456";
+// const ans = parseInt(result);
+// console.log(ans);
+// console.log(typeof ans);
+
+// const result = "1" + 1;
+// let ans = Number(result);
+// console.log(ans);
+// console.log(typeof ans);
+
+// const result = "4" - 1;
+// let ans = Number(result);
+// console.log(ans);
+// console.log(typeof ans);
+
+// const ans = true + 1;
+// console.log(ans);
+// console.log(typeof ans);
+
+// const ans = false + 1;
+// console.log(ans);
+// console.log(typeof ans);
+
+// const ans = true;
+// const output = String(ans);
+// console.log(output);
+// console.log(typeof output);
+
+// const ans = "true";
+// const output = Boolean(ans);
+// console.log(output);
+// console.log(typeof output);
