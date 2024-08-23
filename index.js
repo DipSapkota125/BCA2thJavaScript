@@ -1132,3 +1132,67 @@
 // const output = Boolean(ans);
 // console.log(output);
 // console.log(typeof output);
+
+//normal function
+// function MyFunc(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+
+// let user1 = new MyFunc("Balen Shah", 23);
+// console.log(user1);
+
+//arrow Function
+
+//
+// function MyFunc(name, age) {
+//   this.name = name;
+//   this.age = age;
+// }
+
+// const user1 = new MyFunc("Harka Rai", 45);
+// console.log(user1);
+
+// const MyFunc = (name, age) => {
+//   this.name = name;
+//   this.age = age;
+// };
+
+// const user1 = new MyFunc("Harka Rai", 45);
+// console.log(user1);
+
+//arguments
+
+// function MyFunc() {
+//   console.log(arguments);
+// }
+
+// MyFunc(1, 2, 3, 4);
+
+// const MyFunc = () => {
+//   console.log(arguments);
+// };
+
+// MyFunc(1, 2, 3, 4);
+
+//Hoisting In JAVASCRIPT
+
+// const x = 90;
+// console.log(x);
+
+//Function In Hoisting
+// let result = Sum(5, 7);
+// console.log(result);
+
+// function Sum(a, b) {
+//   return a + b;
+// }
+
+//Arrow Function
+
+const Sum = (a, b) => {
+  return a + b;
+};
+
+let result = Sum(5, 7);
+console.log(result);
